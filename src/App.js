@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import {makeStyles} from '@mui/material/styles';
+import { display } from '@mui/system';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+const useStyles = makeStyles((theme)=>({
+container:{
+ backgroundColor: theme.palette.backgroundColor.paper,
+ padding:theme.spacing(8,0,6)
+},
+icon:{
+    marginRight:'20px',
+},
+button:{
+    marginTop:'40px',
+},
+cardGrid:{
+    padding: '20px 0'
+},
+card:{
+    height:'100%',
+    display:'flex',
+    flexDirection:'column',
+},
+cardMedia:{
+    paddingTop:'56.25%'
+},
+cardContent:{
+    flexGrow:'1',
+},
+footer:{
+    backgroundColor: theme.palette.backgroundColor.paper,
+    padding:'50px 0',
 }
+}));
 
-export default App;
+export default useStyles
